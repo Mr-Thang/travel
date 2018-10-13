@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateToursTable extends Migration
+class CreateEvaluatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateToursTable extends Migration
      */
     public function up()
     {
-        Schema::create('tours', function (Blueprint $table) {
+        Schema::create('evaluates', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
+            $table->string('email')->unique();
             $table->text('content');
-            $table->text('highlights');
-            $table->string('vehicle');
-            $table->string('schedule');
-            $table->string('departure_schedule');
-            $table->integer('admin_id')->unsigned()->index();
-            $table->tinyInteger('status')->default(1);
+            $table->integer('evaluateable_id')->unsigned()->index();
+            $table->string('evaluateable_type');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ class CreateToursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tours');
+        Schema::dropIfExists('evaluates');
     }
 }
