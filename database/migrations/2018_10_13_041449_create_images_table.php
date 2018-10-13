@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->text('link_url');
             $table->string('imageable_type');
-            $table->integer('imageable_type')->unsigned()->index();
+            $table->integer('imageable_id')->unsigned()->index();
             $table->timestamps();
         });
     }
