@@ -17,6 +17,7 @@ class CreateToursTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
+            $table->string('image');
             $table->text('content');
             $table->text('highlights');
             $table->string('vehicle');

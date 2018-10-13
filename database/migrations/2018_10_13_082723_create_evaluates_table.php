@@ -16,7 +16,6 @@ class CreateEvaluatesTable extends Migration
         Schema::create('evaluates', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
             $table->string('email')->unique();
             $table->text('content');
             $table->integer('evaluateable_id')->unsigned()->index();

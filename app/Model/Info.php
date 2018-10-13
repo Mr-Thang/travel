@@ -1,13 +1,14 @@
 <?php
 
-use Cviebrock\EloquentSluggable\Sluggable;
 namespace App\Model;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 
 class Info extends Model
 {
-	use Sluggable;
+	use Sluggable, SluggableScopeHelpers;
 
 	protected $fillable = [
 		'title',
