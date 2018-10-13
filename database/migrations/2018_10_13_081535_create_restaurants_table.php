@@ -21,7 +21,7 @@ class CreateRestaurantsTable extends Migration
             $table->char('phone', 12);
             $table->string('description');
             $table->integer('admin_id')->unsigned()->index();
-            $table->tityInteger('status')->default(1);
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }
