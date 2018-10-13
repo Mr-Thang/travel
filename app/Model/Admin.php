@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notifiable;
 class Admin extends Model
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	protected $fillable = [
 		'first_name',
 		'last_name',
@@ -50,6 +51,9 @@ class Admin extends Model
 	{
 		return $this->hasMany('App\Model\Restaurant');
 	}
+=======
+   // 
+>>>>>>> 795da521c6be34106ee4474357a4db5290eb732e
 =======
    // 
 >>>>>>> 795da521c6be34106ee4474357a4db5290eb732e

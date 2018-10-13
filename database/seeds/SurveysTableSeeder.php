@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\User;
+use App\Model\Survey;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class UsersTabelSeeder extends Seeder
+class SurveysTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,8 @@ class UsersTabelSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Survey::truncate();
+        
+        factory(Survey::class, 3)->create();
     }
 }
