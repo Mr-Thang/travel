@@ -2,10 +2,11 @@
 
 namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Admin extends Model
 {
+<<<<<<< HEAD
 	protected $fillable = [
 		'first_name',
 		'last_name',
@@ -49,4 +50,7 @@ class Admin extends Model
 	{
 		return $this->hasMany('App\Model\Restaurant');
 	}
+=======
+   // 
+>>>>>>> 795da521c6be34106ee4474357a4db5290eb732e
 }
