@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Tag;
+use App\Model\Restaurant;
 use App\Model\Admin;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class TagsTableSeeder extends Seeder
+class RestaurantsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,11 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        Tag::truncate();
-        
+        Restaurant::truncate();
+
         Admin::all()->each(function ($admin)
         {
-        	$admin->tags()->saveMany(factory(Tag::class, 4)->make());
+            $admin->restaurants()->saveMany(factory(Restaurant::class, 4)->make());
         });
     }
 }

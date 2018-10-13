@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Tag;
+use App\Model\FlightTicket;
 use App\Model\Admin;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class TagsTableSeeder extends Seeder
+
+class FlightTicketsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +16,11 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        Tag::truncate();
-        
+        FlightTicket::truncate();
+ 
         Admin::all()->each(function ($admin)
         {
-        	$admin->tags()->saveMany(factory(Tag::class, 4)->make());
+            $admin->flighttickets()->saveMany(factory(FlightTicket::class, 2)->make());
         });
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Admin;
+use App\Model\Survey;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class AdminsTableSeeder extends Seeder
+class SurveysTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +14,8 @@ class AdminsTableSeeder extends Seeder
      */
     public function run()
     {
-        Admin::truncate();
+        Survey::truncate();
         
-        factory(Admin::class, 5)->create();
+        factory(Survey::class, 3)->create();
     }
 }

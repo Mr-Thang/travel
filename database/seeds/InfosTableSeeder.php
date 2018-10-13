@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Model\Info;
 use App\Model\Admin;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class AdminsTableSeeder extends Seeder
+class InfosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +15,11 @@ class AdminsTableSeeder extends Seeder
      */
     public function run()
     {
-        Admin::truncate();
-        
-        factory(Admin::class, 5)->create();
+       	Info::truncate();
+
+        Admin::all()->each(function ($admin)
+        {
+            $admin->infos()->saveMany(factory(Info::class, 4)->make());
+        });
     }
 }

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Tag;
 use App\Model\Post;
 use App\Model\Admin;
 use Faker\Generator as Faker;
@@ -17,13 +16,10 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         Post::truncate();
-        $tags = Tag::all();
-        
-        Admin::all()->each(function ($admin) use ($tags)
+
+        Admin::all()->each(function ($admin)
         {
-        	$admin->posts()->attach(
-                $tags->random(rand(1, 2))->pluck('id')->toArray()
-            );
+            $admin->posts()->saveMany(factory(Post::class, 4)->make());
         });
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Model\Tag;
-use App\Model\Admin;
+use App\Model\RoomType;
+use App\Model\Hotel;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class TagsTableSeeder extends Seeder
+class RoomTypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,11 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        Tag::truncate();
-        
-        Admin::all()->each(function ($admin)
+        RoomType::truncate();
+ 
+        Hotel::all()->each(function ($hotel)
         {
-        	$admin->tags()->saveMany(factory(Tag::class, 4)->make());
+            $hotel->roomtypes()->saveMany(factory(RoomType::class, 4)->make());
         });
     }
 }
