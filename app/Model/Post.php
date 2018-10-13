@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-<<<<<<< HEAD
 	use Sluggable, SluggableScopeHelpers;
 
 	protected $fillable = [
@@ -37,7 +36,4 @@ class Post extends Model
     {
     	return $this->belongsTo('App\Model\Tag');
     }
-=======
-    // 
->>>>>>> 795da521c6be34106ee4474357a4db5290eb732e
 }
