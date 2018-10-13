@@ -18,7 +18,7 @@ class TagsTableSeeder extends Seeder
         Tag::truncate();
         Admin::all()->each(function ($admin)
         {
-        	$admin->Tags()->saveMany(factory(Tag::class, 2)->make());
+        	$admin->tags()->saveMany(factory(Tag::class, 2)->make());
         });
     }
 }

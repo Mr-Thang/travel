@@ -5,7 +5,7 @@ use App\Model\Admin;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class AdminsTabelSeeder extends Seeder
+class AdminsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,7 @@ class AdminsTabelSeeder extends Seeder
     public function run()
     {
         Admin::truncate();
+        
         factory(Admin::class, 2)->create();
     }
 }

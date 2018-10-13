@@ -38,4 +38,10 @@ $factory->define(App\Model\Post::class, function (Faker $faker) {
         'title' => $faker->name,
     ];
 });
-
+// Post
+$factory->define(App\Model\Post::class, function (Faker $faker) {
+    return [
+        'title' => $faker->lastName,
+        'content' => $faker->text,
+    ];
+});

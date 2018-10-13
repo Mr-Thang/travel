@@ -5,7 +5,7 @@ use App\Model\User;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
 
-class UsersTabelSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
