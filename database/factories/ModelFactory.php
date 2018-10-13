@@ -32,4 +32,10 @@ $factory->define(App\Model\Admin::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+// Tag
+$factory->define(App\Model\Post::class, function (Faker $faker) {
+    return [
+        'title' => $faker->name,
+    ];
+});
 
