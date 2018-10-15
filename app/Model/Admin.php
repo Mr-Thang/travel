@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
 class Admin extends Model
 {
