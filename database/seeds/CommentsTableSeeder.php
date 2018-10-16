@@ -16,8 +16,6 @@ class CommentsTableSeeder extends Seeder
     public function run()
     {
         Comment::truncate();
-        $posts = Post::all();
-        
         User::all()->each(function ($user)
         {
             $user->comments()->saveMany(factory(Comment::class, 3)->make());
