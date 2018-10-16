@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'Auth'], function() {
+    Route::post('register', 'RegisterController@register');
+    Route::post('login', 'LoginController@login');
+    Route::get('logout', 'LoginController@logout');
 });
-// 	
-

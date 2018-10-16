@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             // FlightTicketsTableSeeder::class,
             // RestaurantsTableSeeder::class,
             // DishTypesTableSeeder::class,
-            // InfosTableSeeder::class,
+            InfosTableSeeder::class,
 
             // ToursTableSeeder::class,
             // TourTypesTableSeeder::class,
