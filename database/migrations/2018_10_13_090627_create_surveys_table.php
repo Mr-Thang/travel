@@ -17,7 +17,7 @@ class CreateSurveysTable extends Migration
             $table->increments('id');
             $table->string('full_name');
             $table->string('email')->unique();
-            $table->char('phone', 12);
+            $table->char('phone', 20);
             $table->string('address');
             $table->string('service');
             $table->string('fear_likes');
