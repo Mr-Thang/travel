@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1\Admin\Auth;
+namespace App\Http\Controllers\Api\V1\User\Auth;
 
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\Api\Auth\LoginRequest;

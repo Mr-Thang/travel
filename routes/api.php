@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['prefix' => 'v1', 'namespace' => 'Api\V1\Admin'], function() {
+Route::group(['prefix' => 'v1', 'namespace' => 'Api\V1\User'], function() {
     require (base_path('routes/user.php'));
 });
 
